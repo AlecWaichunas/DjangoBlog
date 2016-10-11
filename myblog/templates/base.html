@@ -10,68 +10,16 @@
   {% include 'header.html' %}
 
     <body>
-        <table style="height: 100%">
-            <tr>
-                <td>
-                    <div class="nav_holder">
-                        <div class="nav_bar">
-                            <table class="nav_table">
-                                <tr class="main_pic">
-                                    <td>
-                                        <a href="#about">
-                                            <img class="profile_pic" id="profile_pic" src="/static/imgs/profile_pic.png">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="profile_name" id="profile-name">Alec Waichunas</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell about">
-                                        <a class="tab" id="about_tab" href="#about">
-                                            <img class="nav_bar_option_image" src="/static/imgs/about_me.png">
-                                            About Me
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell projects">
-                                        <a class="tab" id="projects_tab" href="#projects">
-                                            <img class="nav_bar_option_image" src="/static/imgs/projects_pic.png">
-                                            Projects
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell contact">
-                                        <a class="tab" id="contact_tab" href="#contact">
-                                            <img class="nav_bar_option_image" src="/static/imgs/contact.png">
-                                            Contact
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell resume">
-                                        <a class="tab" id="resume_tab" href="#resume">
-                                            <img class="nav_bar_option_image" src="/static/imgs/resume_pic.png">
-                                            Resume
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="content" id="content">
-                        {% block content %}
-                        {% endblock %}
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <!--  Header! -->
+        <div class="header">
+          <p class="header_text">Alec Waichunas</p>
+        </div>
+        <div class="space_header"></div>
+
+        <div class="blog_body">
+          {% block content %}
+          {% endblock %}
+        </div>
     </body>
 
     <footer>
