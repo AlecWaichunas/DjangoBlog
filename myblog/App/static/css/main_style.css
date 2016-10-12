@@ -50,9 +50,12 @@
 .blog_preview_title{
   color: black;
   font-size: 20px;
+  margin: 10px;
+  padding-top: 10px;
 }
 
 .blog_preview_body{
   color: black;
   font-size 14px;
+  margin: 10px;
 }

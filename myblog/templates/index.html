@@ -4,11 +4,14 @@
 
   <div class="blog_highlights">
       <div class="blog_preview">
-        <p class="blog_preview_title">Lorem Ipsum</p>
-        <p class="blog_preview_body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tellus odio, faucibus ac auctor sed, mollis eget mi. Donec convallis interdum pulvinar. Aliquam porta in sem at porttitor. Sed et tempus ipsum. Proin facilisis velit lacus, quis tristique risus imperdiet eu. Aenean porta augue ut suscipit fringilla. In congue justo in lacinia mattis. 
-        </p>
-      </div>
+
+            {% for blog in blogs %}
+                <p class="blog_preview_title"> {{ blog.blog_title }}</p>
+                <p class="blog_preview_body">
+                    {{ blog.get_preview }}
+                </p>
+            {% endfor %}
+        </div>
   </div>
 
 {% endblock %}
