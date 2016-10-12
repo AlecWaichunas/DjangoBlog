@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-  <div class="blog_highlights">
-      <div class="blog_preview">
-
+    <table>
+        <td class="blog_highlights">
             {% for blog in blogs %}
-                <p class="blog_preview_title"> {{ blog.blog_title }}</p>
-                <p class="blog_preview_body">
-                    {{ blog.get_preview }}
-                </p>
+              <div class="blog_preview">
+                        <p class="blog_preview_title"> {{ blog.blog_title }}</p>
+                        <p class="blog_preview_body">
+                            {{ blog.get_preview }}
+                        </p>
+                </div>
             {% endfor %}
-        </div>
-  </div>
+        </td>
+        <td class="side_bar">
+            <div class="link_box">
+            </div>
+        </td>
+    </table>
 
 {% endblock %}
