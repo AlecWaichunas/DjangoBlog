@@ -21,5 +21,6 @@ from App.models import *
 
 urlpatterns = [
     url(r'^$', views.index_view, name='index'),
+    url(r'^blog/(?P<blog_id>[0-9]+)/$', views.blog_view, name='blog'),
     url(r'^admin/', admin.site.urls),
 ]

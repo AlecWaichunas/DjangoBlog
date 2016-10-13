@@ -5,10 +5,11 @@
         <td class="blog_highlights">
             {% for blog in blogs %}
               <div class="blog_preview">
-                        <p class="blog_preview_title"> {{ blog.blog_title }}</p>
-                        <p class="blog_preview_body">
-                            {{ blog.get_preview }}
-                        </p>
+                    <p class="blog_preview_title"><a href="{% url 'blog' blog.id %}">{{ blog.blog_title }}</a></p>
+                    <p class="blog_preview_date"> {{ blog.blog_date }} </p>
+                    <p class="blog_preview_body">
+                        {{ blog.get_preview }}
+                    </p>
                 </div>
             {% endfor %}
         </td>
