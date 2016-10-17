@@ -5,6 +5,11 @@
 * CSS that makes my site look good!
 */
 
+body{
+    padding: 0;
+    margin: 0;
+}
+
 /* HEADER */
 .header {
   position: fixed;
@@ -26,34 +31,47 @@
 }
 
 .space_header{
-  width: 100%;
-  background: inherit;
-  height: 50px;
-}
-
-.blog_body{
-  min-width: 600px;
-  width: 60%;
-  margin: auto;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background: inherit;
+    height: 50px;
 }
 
 /* END HEADER*/
 
+/* BODY SETUP */
+.blog_body{
+    min-width: 600px;
+    width: 60%;
+    margin: auto;
+}
+
+.page_content{
+
+}
+
+.side_bar{
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    height: 600px;
+    width: 200px;
+    min-width: 200px;
+}
+
+.link_box {
+    outline: black solid 1px;
+    width: 200px;
+    min-height: 250px;
+}
+
+/* END BODY */
+
 /*PREVIEW BLOG*/
 
-.blog_highlights{
-    width: 80%;
-}
-
-.side_bar {
-    width: 20%;
-    vertical-align: top;
-}
-
 .blog_preview {
-  outline: black solid 1px;
   backgroud-color: #F0F8FF;
-  margin-bottom: 25px;
 }
 
 .blog_preview_title{
@@ -77,10 +95,67 @@
   margin: 10px;
 }
 
-.link_box{
-    outline: black solid 1px;
-    margin-left: 10px;
-    margin-top: 10px;
+.seperator{
+    height: 3px;
     width: 100%;
-    height: 250px;
+    margin: auto;
+    background-color: black;
+    border-radius: 25px;
+    background: linear-gradient(to right, white, grey, white);
 }
+
+/* BLOG VIEW */
+
+.blog_title{
+    font-size: 32px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.blog_date{
+    font-size: 12px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.blog_text{
+
+}
+
+.comment_heading{
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.comment_form{
+    width: 100%;
+}
+
+.comment_text{
+    width: 100%;
+    resize: none;
+    margin-top: 0;
+}
+
+.comment_button{
+    width: 100px;
+    float: right;
+}
+
+.blog_comment_name{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+}
+
+.blog_comment_time{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 12px;
+}
+
+.blog_comment_text{
+
+}
+
+/* END BLOG VIEW*/

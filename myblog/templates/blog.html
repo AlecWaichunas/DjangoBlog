@@ -2,8 +2,22 @@
 
 {% block content %}
 
-    <p> {{ blog.blog_title }} </p>
-    <p> {{ blog.blog_date }} </p>
-    <p> {{ blog.blog_text }} </p>
+    <p><a href="#"><===</a></p>
+
+    <p class="blog_title"> {{ blog.blog_title }} </p>
+    <p class="blog_date"> {{ blog.blog_date }} </p>
+    <p class="blog_text"> {{ blog.blog_text }} </p>
+
+    <p class="comment_heading">Comment</p>
+    <form class="comment_form">
+        <textarea class="comment_text" cols="150" rows="5" name="comment"></textarea><br>
+        <input class="comment_button" type="button" name="submit" Value="Post"><br>
+    </form>
+
+    <div class="blog_comment">
+        <p class="blog_comment_name">Alec Waichunas</p>
+        <p class="blog_comment_time">2 seconds ago</p>
+        <p class="blog_comment_text">Wow this is a really cool blog!</p>
+    </div>
 
 {% endblock %}

@@ -5,7 +5,7 @@ from App.models import Blog
 def index_view(request):
     context = {
         'site_name': 'Alec\'s blog',
-        'blogs': Blog.objects.all()
+        'blogs': Blog.objects.all().order_by("-blog_date")
     }
     return render(request, 'index.html', context)
 
