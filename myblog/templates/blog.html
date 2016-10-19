@@ -9,9 +9,10 @@
     <p class="blog_text"> {{ blog.blog_text }} </p>
 
     <p class="comment_heading">Comment</p>
-    <form class="comment_form">
+    <form class="comment_form" action="" method="post">
+        {% csrf_token %}
         <textarea class="comment_text" cols="150" rows="5" name="comment"></textarea><br>
-        <input class="comment_button" type="button" name="submit" Value="Post"><br>
+        <input class="comment_button" type="submit" name="submit" Value="Post"><br>
     </form>
 
     <div class="blog_comment">
