@@ -159,3 +159,24 @@ body{
 }
 
 /* END BLOG VIEW*/
+
+.blog_comment{
+    outline: black solid 1px
+}
+
+.blog_comment_name{
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.blog_comment_text{
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.blog_comment_time{
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
