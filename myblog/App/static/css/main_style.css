@@ -180,3 +180,18 @@ body{
     padding-bottom: 5px;
     border-bottom: 1px solid grey;
 }
+
+.comment_author{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.submit_comment {
+    background:transparent;
+    border:none;
+    outline:none;
+    display:block;
+    height: 0px;
+    cursor:pointer;
+}

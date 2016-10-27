@@ -14,11 +14,11 @@ def index_view(request):
 def blog_view(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     if request.method == 'POST':
-        comment_name = "Alec Waichunas"
+        comment_name = request.POST.get('comment_author', '')
         comment_text = request.POST.get('comment', '')
         comment = Comment(comment_author=comment_name, comment_text=comment_text, comment_date=datetime.datetime.today(), blog=blog)
         comment.save()
-    comments = Comment.objects.all().filter(blog=blog)
+    comments = Comment.objects.all().filter(blog=blog).order_by('-comment_date')
     if comments is None:
         comments = {}
 

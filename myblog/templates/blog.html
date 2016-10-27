@@ -11,9 +11,13 @@
     <p class="comment_heading">Comment</p>
     <form action="{% url 'blog' blog.id %}" class="comment_form" action="" method="post">
         {% csrf_token %}
+        <input val="John Doe" type="hidden" class="comment_author" id="comment_author" name="comment_author">
         <textarea class="comment_text" cols="150" rows="5" name="comment"></textarea><br>
-        <input class="comment_button" type="submit" name="submit" Value="Post"><br>
+        <fb:login-button id="submit_comment" name= "submit"class="comment_button" scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+        <input class="submit_comment" id="submit_button" type="submit" name="submit">
     </form>
+
+    <br>
 
     {% for comment in comments %}
         <div class="blog_comment">
@@ -22,5 +26,4 @@
             <p class="blog_comment_text">{{ comment.comment_text }}</p>
         </div>
     {% endfor %}
-
 {% endblock %}
